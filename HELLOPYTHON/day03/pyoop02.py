@@ -11,3 +11,18 @@ class SokchoBird():
     
     def practice(self):
         self.flag_fly = True
+        
+class GaeSae(JindoDog,SokchoBird):
+    def __init__(self):
+        JindoDog.__init__(self)
+        SokchoBird.__init__(self)
+    
+    
+
+gs = GaeSae()
+print(gs.power_bark)
+print(gs.flag_fly)
+gs.train()
+gs.practice()
+print(gs.power_bark)
+print(gs.flag_fly)
