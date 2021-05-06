@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 
@@ -22,7 +23,38 @@ public class Main5 extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			
+			
+			TextField tfMine	= (TextField) scene.lookup("#tfMine");
+			TextField tfCom		= (TextField) scene.lookup("#tfCom");
+			TextField tfResult	= (TextField) scene.lookup("#tfResult");
+			
+			Button btn = (Button) scene.lookup("#btn");
+			btn.setOnMouseClicked(new EventHandler<Event>() {
+				@Override
+				public void handle(Event event) {
+					String mine = tfMine.getText();
+					String com = "";
+					String result = "";
+					
+					double rnd = Math.random();
+					if(rnd>0.5) {
+						com = "È¦";
+					} else {
+						com = "Â¦";
+					}
+					
+					if(mine.equals(com)) {
+						result = "ÀÌ±è";
+					} else {
+						result = "Áü";
+					}
+					
+					tfCom.setText(com);
+					tfResult.setText(result);
 
+					
+				}
+			});
 			
 			
 		} catch(Exception e) {
