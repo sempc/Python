@@ -8,29 +8,33 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 
 
-public class Main2 extends Application {
+public class Main3 extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("main2.fxml"));
+			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("main3.fxml"));
 			Scene scene = new Scene(root,400,400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			
-			Label lbl = (Label) scene.lookup("#lbl");
+			TextField tf1 = (TextField) scene.lookup("#tf1");
+			TextField tf2 = (TextField) scene.lookup("#tf2");
+			TextField tf3 = (TextField) scene.lookup("#tf3");
+			
 			Button btn = (Button) scene.lookup("#btn");
 			btn.setOnMouseClicked(new EventHandler<Event>() {
 				@Override
 				public void handle(Event event) {
-					String a = lbl.getText();
-					int aa = Integer.parseInt(a);
-					aa++;
-					lbl.setText(aa+"");
+					int a = Integer.parseInt(tf1.getText()); 
+					int b = Integer.parseInt(tf2.getText()); 
+					int sum = a + b;
+					tf3.setText(sum+"");
 					
 				}
 			});
