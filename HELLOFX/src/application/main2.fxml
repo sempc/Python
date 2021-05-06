@@ -9,8 +9,8 @@
    <children>
       <Pane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <Button id="btn" layoutX="31.0" layoutY="77.0" mnemonicParsing="false" text="click" />
-            <Label id="lbl" layoutX="31.0" layoutY="44.0" text="GoodMorning" />
+            <Button id="btn" layoutX="31.0" layoutY="77.0" mnemonicParsing="false" text="increase" />
+            <Label id="lbl" layoutX="31.0" layoutY="44.0" text="1" />
          </children>
       </Pane>
    </children>
