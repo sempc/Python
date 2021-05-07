@@ -14,7 +14,11 @@ class WindowClass(QMainWindow, form_class):
         
         
     def btnClick(self): 
-        self.lbl.setText("GoodEvening")
+        a = self.lbl.text()
+        aa = int(a)
+        aa += 1
+        self.lbl.setText(str(aa))
+        
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

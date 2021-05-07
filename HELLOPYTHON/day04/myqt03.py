@@ -2,7 +2,7 @@ import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow
 from PyQt5 import uic
 
-form_class = uic.loadUiType("myqt02.ui")[0]
+form_class = uic.loadUiType("myqt03.ui")[0]
 
 
 class WindowClass(QMainWindow, form_class):
@@ -14,11 +14,18 @@ class WindowClass(QMainWindow, form_class):
         
         
     def btnClick(self): 
-        self.lbl.setText("GoodEvening")
+        a = int(self.le1.text())
+        b = int(self.le2.text())
+        sum = a + b
+        self.le3.setText(str(sum))
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     myWindow = WindowClass()
     myWindow.show()
     sys.exit(app.exec_())
+ 
+ 
+ 
  
