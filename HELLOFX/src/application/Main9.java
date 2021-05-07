@@ -47,9 +47,8 @@ public class Main9 extends Application {
 					String a = tf.getText();
 					
 					Alert alert = new Alert(AlertType.INFORMATION);
-					alert.setTitle("Information Dialog");
-					alert.setHeaderText("Look, an Information Dialog");
-					alert.setContentText("I have a great message for you!");
+					alert.setTitle("Calling");
+					alert.setContentText(a);
 
 					alert.showAndWait();
 				}
